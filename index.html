@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUMA</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/response.css">
+    <script src="./js/arr.js"></script>
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <a href=""><img src="./img/logo_puma.png" alt="PUMA LOGO"></a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="./">Men</a></li>
+                <li><a href="./">Women</a></li>
+                <li><a href="./">New Arrivals</a></li>
+                <li><a href="./">Kids</a></li>
+                <li><a href="./">Collaborations</a></li>
+                <li><a href="./">Sports</a></li>
+                <li><a href="./">Outlet</a></li>
+            </ul>
+        </div>
+        <div class="mypage">
+            <ul>
+                <li><a href="./"></a></li>
+                <li><a href="./"></a></li>
+                <li><a href="./"></a></li>
+                <li><a href="./"></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <iframe class="movie_space" src="https://www.youtube.com/embed/iWI_uBH6R1g?rel=0&amp;autoplay=1&amp;loop=1&amp;playlist=iWI_uBH6R1g&amp;mute=1&amp;controls=0&amp;modestbranding=0&amp;showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls=0; showinfo=0;></iframe>
+        <div class="dark">
+        </div>
+        <img src="./img/scroll_down.gif" alt="Scroll Icon">
+    </main>
+
+    <article>
+        <section id="arrival">
+            <h3 class="head">New Arrival</h3>
+            <div class="outer">
+                
+                <script>
+                    let arrivalBox = "";
+                    
+
+                    for(a=0; a < arrivals.length; a++){
+                        if(a == 0){
+                            arrivalBox += `
+                            <div class="box first" style="background-image: url(./img/newArrivalBg.jpg);">
+                                <div class="txt">
+                                    <h4>${arrivals[a][0]}</h4>
+                                    <p>${arrivals[a][1]}</p>
+                                </div>
+                            </div>
+                            `;
+                        }else{
+                            
+                            
+                            arrivalBox += `
+                            <div class="box" style="background-image: url(./img/products/${arrivals[a][2]});">
+                                <div class="dark">
+                                    <h4>${arrivals[a][0]}</h4>
+                                    <p>${arrivals[a][1]}</p>
+                                    <a href="./">More</a>
+                                </div>
+                            </div>
+                            `;
+                        }
+                    }
+                    document.write(arrivalBox);
+                    
+                    
+                
+                </script>
+            </div>
+        </section>
+
+        <section id="category">
+            <h3 class="head">MATCH YOUR ENERGY</h3>
+            <h4 class="subHead">EXPLORE RUNNING CATEGORIES</h4>
+            <div class="outer">
+
+                <script>
+                    let categoryBox = "";
+
+                    for(c=0; c < categories.length; c++){
+                        categoryBox += `
+                        <div class="box">
+                            <div class="image" style="background-image: url(./img/category_0${c + 1}.jpg")></div>
+                            <div class="txt">
+                                <h4>${categories[c][0]}</h4>
+                                <p>${categories[c][1]}</p>
+                                <a href="./">Shop Now</a>
+                            </div>
+                        </div>
+                        `;
+                    }
+                    document.write(categoryBox);
+                
+                
+                </script>
+                
+            </div>
+        </section>
+
+        <section id="run">
+            <div class="image"></div>
+            <div class="txt">
+                <div class="box">
+                    <h3>RUN PUMA</h3>
+                    <p>PUMA’s history is packed with nearly 75 years of world records, firsts, 
+                        and onlys from Abebe Bikila to Bill Rodgers to Sabrina Mockenhaupt to 
+                        Usain Bolt. In industry years, this makes us faster since forever, and we 
+                        believe now is the time for us to pick up speed again and spark change 
+                        from the most sought-after marathon finish lines to local run 
+                        communities.</p>
+                    <a href="./">More Video</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="collect">
+            <h3 class="head">NEW YEAR, NEW GEAR</h3>
+            <h4 class="subHead">EXPLORE PERFORMANCE COLLECTIONS</h4>
+            <div class="outer">
+
+                <script>
+                    let collectBox = "";
+
+                    for(c=0; c < collect.length; c++){
+                        collectBox += `
+                        <div class="box">
+                            <div class="image" style="background-image: url(./img/collection_0${c + 1}.jpg")></div>
+                            <div class="txt">
+                                <h4>${collect[c][0]}</h4>
+                                <p>${collect[c][1]}</p>
+                                <a href="./">Shop Now</a>
+                            </div>
+                        </div>
+                        `;
+                    }
+                    document.write(collectBox);
+                
+                
+                </script>
+                
+            </div>
+        </section>
+    </article>
+
+    <footer>
+        <div class="dark">
+            <div class="logo">
+                <a href="./"><img src="./img/puma_logo_footer.png" alt="PUMA FOOTER" style="filter: grayscale(100%);"></a>
+            </div>
+            <div class="siteMap">
+                <div class="container">
+
+                    <div class="map">
+
+                        <div class="supports">
+                            <h3>Support</h3>
+                            <div class="list">
+        
+                                <ul class="supL">
+                                    <script>
+                                        let footerSupL = "";
+            
+                                        for(let s in supportL){
+                                            footerSupL += `
+                                            <li class="${supportL[s]}"><a href="./">${supportL[s]}</a></li>
+                                            
+                                            `;
+                                        }
+                                        document.write(footerSupL);
+                                    </script>
+                                </ul>
+                                <ul class="supR">
+                                    <script>
+                                        let footerSupR = "";
+            
+                                        for(let s in supportR){
+                                            footerSupR += `
+                                            <li class="${supportR[s]}"><a href="./">${supportR[s]}</a></li>
+                                            
+                                            `;
+                                        }
+                                        document.write(footerSupR);
+                                    </script>
+                                </ul>
+        
+                            </div>
+                        </div>
+                        <div class="about">
+                            <h3>About</h3>
+                            <div class="list">
+        
+                                <ul class="aboutL">
+                                    <script>
+                                        let footerAbL = "";
+            
+                                        for(let s in supportL){
+                                            footerAbL += `
+                                            <li class="${aboutL[s]}"><a href="./">${aboutL[s]}</a></li>
+                                            
+                                            `;
+                                        }
+                                        document.write(footerAbL);
+                                    </script>
+                                </ul>
+                                <ul class="aboutR">
+                                    <script>
+                                        let footerAbR = "";
+            
+                                        for(let s in aboutR){
+                                            footerAbR += `
+                                            <li class="${aboutR[s]}"><a href="./">${aboutR[s]}</a></li>
+                                            
+                                            `;
+                                        }
+                                        document.write(footerAbR);
+                                    </script>
+                                </ul>
+        
+                            </div>
+                        </div>
+    
+                    </div><!--map-->
+    
+                    <div class="line"></div>
+                    <div class="copyright">
+                        <p>© PUMA SE, 2022. All Rights Reserved.</p>
+                    </div>
+
+                </div>
+                
+
+            </div>
+            <div class="bgLogo">
+                <div class="footerLogoR"></div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="./js/script.js"></script>
+</body>
+</html>
